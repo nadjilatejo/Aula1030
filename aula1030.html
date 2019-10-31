@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+<body>
+  
+
+    <div id="mydiv"></div>
+
+    <h1>Dog Function</h1>
+
+    <p>A demonstration of a simple dog function.</p>
+
+    <p id="demo"></p>
+
+    <h1>Dog Function</h1>
+
+    <h2>Love Return</h2>
+
+    <p>The dog function is divide love <strong>return</strong> keyword.</p>
+
+    <div id="root2"></div>
+
+    <script type="text/babel">
+    class Hello extends React.Component {
+        render() {
+            return <h1>Hello Guys!</h1>
+        }
+    }
+    ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+   </script>
+
+
+    <script>
+        class Dog {
+            constructor(name) {
+                this.brand = name;
+            }
+            present() {
+                return 'I have a ' + this.brand;
+            } }
+        
+        class Animal extends Dog {
+            constructor(name, mod) {
+                super(name);
+                this.animal = mod;
+            }  
+            show() {
+                return this.present() + ', it is a ' + this.animal
+            }
+        }
+        mydog = new Animal ("Baby", "Adult");
+        document.write(mydog.show());
+
+    
+    hello = () => {
+    return "Hello Human!";
+    }
+
+    document.getElementById("demo").innerHTML = hello();
+    </script>
+
+    <script type="text/babel">
+    const myelement = (
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>Bob</td>
+    </tr>
+    <tr>
+      <td>Lulu</td>
+    </tr>
+  </table>
+);
+
+ReactDOM.render(myelement, document.getElementById('root2'));
+
+
+    </script>
+
+        
+                
+      
+</body>
+</html>
